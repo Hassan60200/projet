@@ -1,0 +1,130 @@
+html,body{
+    height:100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h3{
+    font-family: 'Chilanka', sans-serif;
+    
+}
+
+.title{
+    font-size: 100px;
+}
+
+.logo{
+    color: white;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.reserved{
+    background: url("../img/lunch.jpg");
+    background-size:cover;
+    background-attachment:fixed;}
+
+.formBook{
+    opacity: .8;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+
+.container-fluid{
+    overflow: hidden;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.header{
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    height:50vw;
+    min-height:400px;
+    max-height:550px;
+    min-width:300px;
+    color:#eee;
+    background:#1B2030 url("../img/salle.jpg") top center no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+
+
+.fond{
+    background-image:linear-gradient(#3E2A81, #3E2A81);
+    font-weight: bold;
+}
+
+.info{
+    width:100%;
+    text-align:center;
+    text-shadow:1px 1px 2px black;
+    margin-top: 200px;
+}
+
+.content{
+    padding:5% 10%;
+    text-align:justify;
+    background: url("../img/salle.jpg");
+    background-size:cover;
+    background-attachment:fixed;}
+
+
+
+.footer {
+    width: 100%;
+    background-color: #222;
+    position: relative;
+    z-index: 1;
+}
+
+
+.call{
+    background:#1B2030 url("../img/food.jpg");
+    background-size:cover;
+    background-attachment:fixed;
+    font-family: monospace
+}
+
+.formLogin, input [submit]{
+    border-radius: 30px !important;
+    background-color: dark !important;
+}
+
+.btn-outline-success:hover{
+    background-color: green !important;
+}
+
+label{
+    font-weight: bolder;
+    font-size: 20px;
+    line-height: 30px;   
+    margin-top: 10px;
+}
+
+
+.menu{
+    background:#1B2030 url("../img/salle.jpg");
+    background-size:cover;
+    background-attachment:fixed;;
+   font-family: 'Chilanka', cursive;
+}
+
+.fab, .fas{
+    font-size: 100px;
+    opacity: 1;
+}
+
+.resize{
+    height: 100%;
+    width: 10%;
+    margin-left: 150px;
+}
