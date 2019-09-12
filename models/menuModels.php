@@ -52,6 +52,15 @@ class Menu {
         return $displayMenu;
     }
 
+    
+    public function getMenu($id){
+        $sql = 'SELECT Menu.*, `types`.`name` as `type` FROM `Menu` INNER JOIN `types` ON `Menu`.`id_types` = `types`.`id` WHERE Menu.id = :id ';
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     //fonction supprimer l'utilisateur
     public function deleteMenu($id) {
         // On prépare une requête de suppression
@@ -66,19 +75,15 @@ class Menu {
         }
     }
 
-    public function updateMenu($title, $price, $id_types) {
+    public function editMenu($id, $title, $price, $id_types) {
         //preparation de la requete
-        $query = $this->db->prepare("UPDATE `Menu` SET title = :title, price = :price, id_types = :id_types WHERE id = :id;");
+        $query = $this->db->prepare("UPDATE `Menu` SET title = :title, price = :price, id_types = :types WHERE id = :id;");
+        $query->bindValue(':id', $id, PDO::PARAM_INT);
         $query->bindValue(':title', $title, PDO::PARAM_STR);
         $query->bindValue(':price', $price, PDO::PARAM_INT);
         $query->bindValue(':types', $id_types, PDO::PARAM_INT);
         //execution de la requete
         $query->execute();
-        if ($query->rowCount() > 0) {
-            return true;
-        }
-        return false;
     }
-
 
 }

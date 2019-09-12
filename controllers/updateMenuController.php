@@ -1,20 +1,28 @@
 <?php
+
 include_once '../models/menuModels.php';
 include_once '../models/types.php';
-if(isset($_POST['updateMenu'])){
+
+
+$types = new types();
+$typesList = $types->getTypes();
+
+$menu = new Menu();
+$menuList = $menu->getMenu($_GET['id']);
+
+if (isset($_POST['modify'])) {
+    $title = $_POST['title'];
+    $id_types = $_POST['type'];
+    $price = $_POST['price'];
+    $id = $_GET['id'];
     $update = new Menu();
-    $update->updateMenu();
+    $update->editMenu($id, $title, $price, $id_types);
     header('Location: ../views/displayMenu.php');
 }
 
-function checkForm() {
-    global $title, $type, $price;
-    $title = $_POST['title'];
-    $type = $_POST['type'];
-    $price = $_POST['price'];
-    return TRUE;
-}
 
-if(empty($_SESSION)){
+
+
+if (empty($_SESSION)) {
     header('Location: ../views/login.php');
 }

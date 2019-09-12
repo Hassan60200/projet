@@ -1,6 +1,7 @@
 <?php
 include 'header.php';
-include_once '../controllers/menuController.php';;
+include_once '../controllers/menuController.php';
+;
 ?>
 <div class="container-fluid main">
     <section>
@@ -31,12 +32,12 @@ include_once '../controllers/menuController.php';;
                     <div class="rm-back">
                         <div class="rm-content">
                             <h1>Entrée </h1>
-                             <?php foreach ($displayMenu as $display) {
-                        ?>
-                            <p><?= $display->title ?>, <?= $display->price ?>€</p>
-                            <?php
-                    }
-                    ?>
+                            <?php foreach ($displayMenu as $display) {
+                                ?>
+                                <p><?= $display->title ?>, <?= $display->price ?>€</p>
+                                <?php
+                            }
+                            ?>
                         </div><!-- /rm-content -->
                         <div class="rm-overlay"></div>
 
@@ -47,7 +48,8 @@ include_once '../controllers/menuController.php';;
                 <div class="rm-middle">
                     <div class="rm-inner">
                         <div class="rm-content">
-                         
+                            <h1>Plat</h1>
+
                         </div><!-- /rm-content -->
                         <div class="rm-overlay"></div>
                     </div><!-- /rm-inner -->
@@ -61,7 +63,11 @@ include_once '../controllers/menuController.php';;
                     <div class="rm-back">
                         <span class="rm-close">Fermer</span>
                         <div class="rm-content">
+                            <h1>Déssert </h1>
                             
+                            
+                            
+                            <h1>Boisson </h1>
                         </div><!-- /rm-content -->
                     </div><!-- /rm-back -->
                 </div><!-- /rm-right -->
