@@ -10,7 +10,7 @@
 CREATE TABLE membres(
         id         Int  Auto_increment  NOT NULL ,
         pseudo     Varchar (50) NOT NULL ,
-        mail       Varchar (4) NOT NULL ,
+        mail       Varchar (100) NOT NULL ,
         motdepasse Text NOT NULL
 	,CONSTRAINT membres_PK PRIMARY KEY (id)
 )ENGINE=InnoDB;
@@ -24,7 +24,7 @@ CREATE TABLE register(
         id         Int  Auto_increment  NOT NULL ,
         lastname   Varchar (50) NOT NULL ,
         firstname  Varchar (50) NOT NULL ,
-        mail       Varchar (50) NOT NULL ,
+        mail       Varchar (100) NOT NULL ,
         phone      Varchar (10) NOT NULL ,
         day        Date NOT NULL ,
         booking    Int NOT NULL ,
@@ -42,9 +42,9 @@ CREATE TABLE register(
 
 CREATE TABLE contact(
         id         Int  Auto_increment  NOT NULL ,
-        lastname   Varchar (4) NOT NULL ,
-        firstname  Varchar (4) NOT NULL ,
-        mail       Varchar (4) NOT NULL ,
+        lastname   Varchar (30) NOT NULL ,
+        firstname  Varchar (30) NOT NULL ,
+        mail       Varchar (100) NOT NULL ,
         phone      Int NOT NULL ,
         zipCode    Int NOT NULL ,
         message    Text NOT NULL ,
