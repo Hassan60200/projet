@@ -59,6 +59,14 @@ class Contact {
         $userList = $usersRequest->fetchAll(PDO::FETCH_OBJ);
         return $userList;
     }
+    
+    public function getProfil($id){
+         $sql = 'SELECT * FROM contact WHERE id = :id ';
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_OBJ);
+    }
 
     //création d'un nouveau message$  de contact
     public function createContact($lastname, $firstname, $mail, $zipCode, $phone, $message) {
@@ -95,7 +103,7 @@ class Contact {
             }
         } 
 
-    public function getUserById() {
+    public function getUserById($id) {
         $request = $this->db->prepare('SELECT * FROM contact WHERE `id` = :id');
         $request->bindValue(':id', $this->id, PDO::PARAM_INT);
         if ($request->execute()) {

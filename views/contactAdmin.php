@@ -31,7 +31,7 @@ require_once '../views/navbarAdmin.php';
             <td><?= $user->mail ?></td>
             <td><?= $user->phone ?></td>
             <td><?= $user->zipCode ?></td>
-            <td><a href="displayContact.php?id=<?= $user->id ?>" class="btn btn-success btn-block">Voir profil</a></td>
+            <td><a href="displayContact.php?id=<?= $user->id ?>" class="btn btn-success btn-block">Voir Message</a></td>
             <td><a href="confirmDeleteContact.php?id=<?= $user->id ?>" class="btn btn-danger btn-block">Supprimer</a></td>
         </tr>
         <?php
