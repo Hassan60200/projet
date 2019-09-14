@@ -6,7 +6,7 @@ html,body{
 
 h1, h3{
     font-family: 'Chilanka', sans-serif;
-    
+
 }
 
 .title{
@@ -15,12 +15,6 @@ h1, h3{
 
 .logo{
     color: white;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
 }
 
 .reserved{
@@ -56,11 +50,8 @@ h1, h3{
     background-attachment:fixed;
 }
 
-
-
 .fond{
     background-image:linear-gradient(#3E2A81, #3E2A81);
-    font-weight: bold;
 }
 
 .info{
@@ -76,16 +67,6 @@ h1, h3{
     background: url("../img/salle.jpg");
     background-size:cover;
     background-attachment:fixed;}
-
-
-
-.footer {
-    width: 100%;
-    background-color: #222;
-    position: relative;
-    z-index: 1;
-}
-
 
 .call{
     background:#1B2030 url("../img/food.jpg");
@@ -106,7 +87,7 @@ h1, h3{
 label{
     font-weight: bolder;
     font-size: 20px;
-    line-height: 30px;   
+    line-height: 30px;
     margin-top: 10px;
 }
 
@@ -119,8 +100,7 @@ label{
 }
 
 .fab, .fas{
-    font-size: 100px;
-    opacity: 1;
+    font-size: 30px;
 }
 
 .resize{

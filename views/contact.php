@@ -1,10 +1,4 @@
 <?php
-$lastname = $_POST['lastname'];
-$firstname = $_POST['firstname'];
-$mail = $_POST['mail'];
-$zipCode = $_POST['zipCode'];
-$phone = $_POST['phone'];
-$message = $_POST['message'];
 include_once '../controllers/contactController.php';
 include_once '../views/header.php';
 ?>
@@ -13,15 +7,11 @@ include_once '../views/header.php';
     <div class="row">
         <div  class="col-12 col-lg-12">
             <!-- Début du formulaire -->
-            <?php
-            if (isset($_POST['bouton'])) {
-                ?>
-                <div class="col-md-12 mt-2">
-                    <p class="alert alert-success">Votre message a bien été envoyé.</p>
-                </div>
-                <?php
-            } else {
-                ?>
+             <?php if (isset($error)) { ?>
+                    <p class="alert alert-danger"><?= $error ?></p>
+                <?php } else { ?>
+                    <p class="alert-success"><?= $succes ?></p>
+                <?php } ?>
                 <form class="px-5 mt-5 p-2" id="contact" action="" method="POST">
                     <h1 class="text-white">Contactez-nous</h1>
                     <div class="row">
@@ -63,9 +53,6 @@ include_once '../views/header.php';
                     <div class="g-recaptcha" data-sitekey="6LdEmLAUAAAAANDJ_ozLUJR4hdsYV38EQ4MUcsaI"></div>
 
                 </form>
-                <?php
-            }
-            ?>
             <!-- Fin du formulaire -->
         </div>
         <div class="col-12">

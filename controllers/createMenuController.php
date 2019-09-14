@@ -7,12 +7,15 @@ $types = new types();
 $typesList = $types->getTypes();
 
 if (isset($_POST['createMenu'])) {
-    if (checkForm()) {
-        $create = new Menu();
-        if ($createMenu = $create->createMenu($title, $type, $price)) {
-            header('Location: ../views/displayMenu.php');
-        }
-        
+    if (!empty($_POST['title']) && !empty($_POST['type']) && !empty($_POST['price'])) {
+        if (checkForm()) {
+            $create = new Menu();
+            if ($createMenu = $create->createMenu($title, $type, $price)) {
+                header('Location: ../views/displayMenu.php');
+            }
+        } 
+        }else {
+           $error = 'Veuillez remplir tous les champs du formulaire !!!'; 
     }
 }
 
@@ -24,6 +27,6 @@ function checkForm() {
     return TRUE;
 }
 
-if(empty($_SESSION)){
+if (empty($_SESSION)) {
     header('Location: ../views/login.php');
 }

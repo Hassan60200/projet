@@ -5,9 +5,11 @@ include_once '../views/navbarAdmin.php';
 ?>
 <div class="container-fluid">   
     <div class="row justify-content-center">
-        <div class="m-5 col-md-9 d-inline-flex">
-            <input type="text" class="w-100 text-center" placeholder="Rechercher">
+        <div class="m-5 col-md-10 col-12 d-inline-flex">
+            <form method="POST" class="col-10 d-flex">
+            <input type="search" class="w-100 text-center"  name="search" placeholder="Rechercher">
             <input type="submit" class="btn btn-primary" value="Rechercher">
+            </form>
         </div>
         <div class="text-center col-md-12">
             <table class="table table-bordered text-center table-hover text-dark">
@@ -28,8 +30,8 @@ include_once '../views/navbarAdmin.php';
                             <td><?= $display->title ?></td>
                             <td><?= $display->type ?></td>
                             <td><?= $display->price ?></td>
-                            <td><a href="confirmDeleteMenu.php?id=<?= $display->id ?>" class="btn btn-danger btn-block">Supprimer</a></td>
-                            <td><a href="updateMenu.php?id=<?= $display->id ?>" class="btn btn-success btn-block">Modifier</a></td>
+                            <td><a href="confirmDeleteMenu.php?id=<?= $display->id ?>" class="btn btn-danger btn-block"><i class="fas fa-trash-alt"></i></a></td>
+                            <td><a href="updateMenu.php?id=<?= $display->id ?>" class="btn btn-success btn-block"><i class="fas fa-edit"></i></a></td>
                         </tr>
                         <?php
                     }
@@ -39,3 +41,6 @@ include_once '../views/navbarAdmin.php';
         </div>
     </div>
 </div>
+<?php
+include_once 'footer.php';
+?>

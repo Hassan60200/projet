@@ -9,7 +9,7 @@ require_once '../views/navbarAdmin.php';
         <h1>Gestion des contacts</h1>
     </div>
     <div class="text-center col-md-12">
-    <table class="table table-bordered text-center table-hover text-dark">
+    <table class="table table-bordered table-responsive-lg text-center table-hover text-dark">
         <thead class="font-weight-bold">
             <tr>
                 <td>ID</td>
@@ -31,8 +31,8 @@ require_once '../views/navbarAdmin.php';
             <td><?= $user->mail ?></td>
             <td><?= $user->phone ?></td>
             <td><?= $user->zipCode ?></td>
-            <td><a href="displayContact.php?id=<?= $user->id ?>" class="btn btn-success btn-block">Voir Message</a></td>
-            <td><a href="confirmDeleteContact.php?id=<?= $user->id ?>" class="btn btn-danger btn-block">Supprimer</a></td>
+            <td><a href="displayContact.php?id=<?= $user->id ?>" class="btn btn-success btn-block"><i class="fas fa-comment-dots"></i></a></td>
+            <td><a href="confirmDeleteContact.php?id=<?= $user->id ?>" class="btn btn-danger btn-block"><i class="fas fa-trash-alt"></i></a></td>
         </tr>
         <?php
     }

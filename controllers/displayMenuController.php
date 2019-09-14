@@ -3,6 +3,11 @@
 include_once '../models/menuModels.php';
 include_once '../models/types.php';
 
+$search = htmlspecialchars($_POST['search']);
+
+$research = new Menu();
+$researchlist = $research->searchMenu();
+
 if (checkForm()) {
     $display = new Menu();
     $displayMenu = $display->getAllMenu();

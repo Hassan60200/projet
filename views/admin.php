@@ -14,7 +14,6 @@ include_once '../controllers/adminController.php';
     <title>L'ESCALE</title>
 </head>
 <body>
-
     <div class="container-fluid">
         <nav id="navbar" class="fond navbar navbar-expand-lg navbar-light sticky-top">
             <a href="admin.php" class="logo nav-link font-weight-bold">L'ESCALE</a>

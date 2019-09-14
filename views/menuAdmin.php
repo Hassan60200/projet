@@ -3,12 +3,12 @@ session_start();
 include_once '../controllers/menuAdminController.php';
 include_once '../views/navbarAdmin.php';
 ?>
-<div class="container-fluid menu">
+<div class="container-fluid ">
     <div class="row">
-        <div class="col-12 m-5 d-flex justify-content-center">
+        <div class="col-lg-12 col-sm-12 m-5 d-flex justify-content-around">
             <div class="m-5">
-                <a href="createMenu.php"><img src="../assets/img/menu.jpg" class="resize border border-light" alt="Creation d'un menu chez L'escale"></a>
-                <a href="displayMenu.php"><img src="../assets/img/read.png" class="resize border border-light" alt="Creation d'un menu chez L'escale"></a>
+                <a href="createMenu.php"><i class="fas fa-cart-plus p-4"></i></a>
+                <a href="displayMenu.php"><i class="fas fa-book-reader p-4"></i></a>
             </div>
         </div>
     </div>

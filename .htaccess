@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteRule  ^views/pageadmin$ views/admin.php
+RewriteRule  ^views/réservation$ views/book.php
+RewriteRule  ^views/gestiondesreservations$ views/bookAdmin.php
+RewriteRule  ^views/confirmationdesuppressioncontact$ views/confirmDeleteContact.php
+RewriteRule  ^views/confirmationdesuppressionmenu$ views/confirmDeleteMenu.php
+RewriteRule  ^views/prisedecontact$ views/contact.php
+RewriteRule  ^views/gestiondesadmins$ views/contactAdmin.php
+RewriteRule  ^views/créationdunmenu$ views/createMenu.php
+RewriteRule  ^views/supprimerreservation$ views/deleteBooking.php
+RewriteRule  ^views/messagecontact$ views/displayContact.php
+RewriteRule  ^views/([a-z0-9-]+)$ views/error.php
+ErrorDocument 404 /views/error.phpexit

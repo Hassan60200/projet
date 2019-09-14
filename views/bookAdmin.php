@@ -20,7 +20,7 @@ require_once '../views/navbarAdmin.php';
         <h1>Gestion des réservations</h1>
     </div>
     <div class="text-center col-md-12">
-    <table class="table table-bordered text-center table-hover">
+    <table class="table table-bordered table-responsive-lg text-center table-hover">
         <thead class="font-weight-bold">
             <tr>
                 <td>ID</td>
@@ -45,9 +45,8 @@ require_once '../views/navbarAdmin.php';
                     <td><?=$userBooking->phone ?></td>
                     <td><?=$userBooking->mail ?></td>
                     <td><?=$userBooking->people ?></td>
-                    <td class="btn btn-success"><a href="sendmail.php" class="text-dark" name="accept">Accepter</a></td>
-                    <td class="btn btn-primary"><a href="profilUser.php&id=<?= $userBooking->id ?> "class="text-dark" name="look">Voir</a></td>
-                    <td class="btn btn-danger"><a href="deleteBooking.php?id=<?= $userBooking->id ?>" class="text-dark"  name="delete" >Supprimer</a></td>
+                    <td class="btn btn-success"><a href="sendmail.php" class="text-dark" name="accept"><i class="fas fa-user-check"></i></a></td>
+                    <td class="btn btn-danger"><a href="deleteBooking.php?id=<?= $userBooking->id ?>" class="text-dark"  name="delete" ><i class="fas fa-trash-alt"></i></a></td>
                     </tr>
             <?php endforeach; ?>
         </tbody>

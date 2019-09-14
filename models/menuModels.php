@@ -85,5 +85,12 @@ class Menu {
         //execution de la requete
         $query->execute();
     }
+    
+    
+    public function searchMenu(){
+                //preparation de la requete
+        $research = $this->db->query('SELECT title FROM `Menu` INNER JOIN `types` ON `Menu`.`id_types` = `types`.`id` LIKE "%'.$search.'%"');
+        $research->execute();
+    }
 
 }

@@ -14,7 +14,7 @@ session_start();
 </head>
 <body>
 <div class="container-fluid">
-        <nav id="navbar" class="fond navbar navbar-expand-lg navbar-light sticky-top">
+        <nav id="navbar" class="fond navbar navbar-expand-lg navbar-light sticky-top fixed-top">
             <a href="admin.php" class="logo nav-link font-weight-bold">L'ESCALE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,15 +36,5 @@ session_start();
                 </ul>
             </div>
         </nav>
-        <div class="header">
-            <div class="info">
-                <h1>L'ESCALE</h1>
-                <h3>Restaurant & brasserie</h3>
-                <i class="fas fa-hamburger"></i>
-                <i class="fas fa-fish"></i>
-                <i class="fas fa-cocktail"></i>
-                <i class="fas fa-mug-hot"></i>
-            </div>
-        </div>
     </div>
 </body>
