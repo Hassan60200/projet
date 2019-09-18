@@ -1,5 +1,5 @@
 <?php
-include 'header.php';
+include '../views/header.php';
 include_once '../controllers/menuController.php';
 ;
 ?>

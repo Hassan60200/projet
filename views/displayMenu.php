@@ -8,7 +8,7 @@ include_once '../views/navbarAdmin.php';
         <div class="m-5 col-md-10 col-12 d-inline-flex">
             <form method="POST" class="col-10 d-flex">
             <input type="search" class="w-100 text-center"  name="search" placeholder="Rechercher">
-            <input type="submit" class="btn btn-primary" value="Rechercher">
+            <input type="submit" class="btn btn-primary" name="research" value="Rechercher">
             </form>
         </div>
         <div class="text-center col-md-12">

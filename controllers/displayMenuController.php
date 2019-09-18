@@ -3,11 +3,13 @@
 include_once '../models/menuModels.php';
 include_once '../models/types.php';
 
-$search = htmlspecialchars($_POST['search']);
-
-$research = new Menu();
-$researchlist = $research->searchMenu();
-
+if (isset($_POST['research'])) {
+    if (!empty($_POST['search'])) {
+        $search = htmlspecialchars($_POST['search']);
+        $research = new Menu();
+        $researchlist = $research->searchMenu($search);
+    }
+}
 if (checkForm()) {
     $display = new Menu();
     $displayMenu = $display->getAllMenu();
@@ -23,4 +25,4 @@ function checkForm() {
 
 if (empty($_SESSION)) {
     header('Location: ../views/login.php');
-}
+}    
