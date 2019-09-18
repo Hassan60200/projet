@@ -8,6 +8,7 @@ class Menu {
     private $type;
     private $db;
 
+//Connexion à ma BDD
     public function __construct() {
         try {
             $this->db = new PDO('mysql:host=localhost;dbname=Escale', 'DERKAOUI', 'sharigan60', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8', PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -33,7 +34,7 @@ class Menu {
         return $this->price;
     }
 
-    //création d'un nouveau message$  de contact
+    //création d'un nouveau menu
     public function createMenu($title, $type, $price) {
         $query = $this->db->prepare('INSERT INTO Menu (title, id_types, price) VALUE (:title, :type, :price)');
         // Lier les variables à l'instruction 'prepare' en tant que valeurs
@@ -46,13 +47,22 @@ class Menu {
 
     //fonction affichage des menus
     public function getAllMenu() {
-        $sql = 'SELECT Menu.*, `types`.`name` as `type` FROM `Menu` INNER JOIN `types` ON `Menu`.`id_types` = `types`.`id`';
-        $menu = $this->db->query($sql);
-        $displayMenu = $menu->fetchAll(PDO::FETCH_OBJ);
-        return $displayMenu;
+      //si le champt search est saisi et n'est pas vide alors
+        if(isset($_POST['search']) && !empty($_POST['search'])){
+          //le champ saise sera afficher dans la barre de recherche
+          $search = htmlspecialchars($_POST['search']);
+        }else {
+          //sinon rien ne sera afficher sur la barre de recherche
+          $search = '';
+        }
+        $sql = 'SELECT Menu.*, `types`.`name` as `type` FROM `Menu` INNER JOIN `types` ON `Menu`.`id_types` = `types`.`id` WHERE `Menu`.`title` LIKE :search OR `types`.`name` LIKE :search' ;
+        $menu = $this->db->prepare($sql);
+        $menu->bindValue(':search', '%'.$search.'%');
+        $menu->execute();
+        return $menu->fetchAll(PDO::FETCH_OBJ);
     }
 
-    
+//fonction affichage du menu dans la page updatemenu.php
     public function getMenu($id){
         $sql = 'SELECT Menu.*, `types`.`name` as `type` FROM `Menu` INNER JOIN `types` ON `Menu`.`id_types` = `types`.`id` WHERE Menu.id = :id ';
         $stmt = $this->db->prepare($sql);
@@ -61,7 +71,7 @@ class Menu {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    //fonction supprimer l'utilisateur
+    //fonction suppression du menu
     public function deleteMenu($id) {
         // On prépare une requête de suppression
         $sql = 'DELETE FROM Menu WHERE id = :id';
@@ -75,6 +85,7 @@ class Menu {
         }
     }
 
+// fonction de modification
     public function editMenu($id, $title, $price, $id_types) {
         //preparation de la requete
         $query = $this->db->prepare("UPDATE `Menu` SET title = :title, price = :price, id_types = :types WHERE id = :id;");
@@ -85,12 +96,13 @@ class Menu {
         //execution de la requete
         $query->execute();
     }
-    
-    
-    public function searchMenu(){
-                //preparation de la requete
+
+
+    public function searchMenu($search){
+                //preparation de la requete de recherche de menu
         $research = $this->db->query('SELECT title FROM `Menu` INNER JOIN `types` ON `Menu`.`id_types` = `types`.`id` LIKE "%'.$search.'%"');
         $research->execute();
+        return $research->fetchAll(PDO::FETCH_ASSOC);
     }
 
 }
