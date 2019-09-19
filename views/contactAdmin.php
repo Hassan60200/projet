@@ -4,10 +4,10 @@ include_once '../controllers/contactAdminController.php';
 require_once '../views/navbarAdmin.php';
 ?>
 <div class="container-fluid">
-    <div class="row">
-    <div class="text-center text-white">
+    <div class="text-center my-4">
         <h1>Gestion des contacts</h1>
     </div>
+        <div class="row">
     <div class="text-center col-md-12">
     <table class="table table-bordered table-responsive-lg text-center table-hover text-dark">
         <thead class="font-weight-bold">

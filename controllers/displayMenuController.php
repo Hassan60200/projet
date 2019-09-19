@@ -4,14 +4,7 @@ error_reporting(E_ALL);
 include_once '../models/menuModels.php';
 include_once '../models/types.php';
 
-if (isset($_POST['research'])) {
-    if (!empty($_POST['search'])) {
-        $search = htmlspecialchars($_POST['search']);
-        $research = new Menu();
-        $researchlist = $research->searchMenu($search);
-    }
-}
-
+    
 //Lorsqu'on utilise la fonction checkForm alors on active la fonction ci-dessous
     $display = new Menu();
     $displayMenu = $display->getAllMenu();

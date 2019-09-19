@@ -96,13 +96,4 @@ class Menu {
         //execution de la requete
         $query->execute();
     }
-
-
-    public function searchMenu($search){
-                //preparation de la requete de recherche de menu
-        $research = $this->db->query('SELECT title FROM `Menu` INNER JOIN `types` ON `Menu`.`id_types` = `types`.`id` LIKE "%'.$search.'%"');
-        $research->execute();
-        return $research->fetchAll(PDO::FETCH_ASSOC);
-    }
-
 }

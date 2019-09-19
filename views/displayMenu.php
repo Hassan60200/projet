@@ -5,10 +5,12 @@ include_once '../views/navbarAdmin.php';
 ?>
 <div class="container-fluid">   
     <div class="row justify-content-center">
-        <div class="m-5 col-md-10 col-12 d-inline-flex">
+        <div class="m-5 col-md-10 col-12 d-inline-flex justify-content-center">
             <form method="POST" class="col-10 d-flex">
-            <input type="search" class="w-100 text-center"  name="search" placeholder="Rechercher">
-            <input type="submit" class="btn btn-primary" name="research" value="Rechercher">
+                <input type="search" class="w-100 text-center"  name="search" placeholder="Rechercher">
+                <input type="submit" class="btn btn-primary btn-group-lg glass" name="research" value="">
+                <div class="button__horizontal"></div>
+                <div class="button__vertical"></div>
             </form>
         </div>
         <div class="text-center col-md-12">

@@ -16,7 +16,7 @@ require_once '../views/navbarAdmin.php';
     </head>
 <div class="container-fluid reservation">
     <div class="rowr">
-    <div class="text-center">
+    <div class="text-center my-4">
         <h1>Gestion des réservations</h1>
     </div>
     <div class="text-center col-md-12">

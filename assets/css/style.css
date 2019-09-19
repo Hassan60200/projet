@@ -96,7 +96,7 @@ label{
     background:#1B2030 url("../img/salle.jpg");
     background-size:cover;
     background-attachment:fixed;;
-   font-family: 'Chilanka', cursive;
+    font-family: 'Chilanka', cursive;
 }
 
 .fab, .fas{
@@ -104,5 +104,19 @@ label{
 }
 
 .resize{
-font-size: 100px;
+    font-size: 100px;
 }
+
+
+.glass{
+    background-image:  url("../img/magnifier.png");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    width: 100px;
+    height: 35px;
+}
+
+.glass:hover{
+    opacity: 0.2
+}
+
