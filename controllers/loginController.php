@@ -25,5 +25,7 @@ if (isset($_POST['forminscription'])) {
                 header('Location: ../views/connexion.php');
             }
         }
+    } else {
+        $error = 'Veuillez remplir tous les champs du formulaires !!!!';
     }
 }

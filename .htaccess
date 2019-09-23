@@ -11,4 +11,5 @@ RewriteRule  ^views/supprimerreservation$ views/deleteBooking.php
 RewriteRule  ^views/messagecontact$ views/displayContact.php
 RewriteRule  ^views/([a-z0-9-]+)$ views/error.php
 RewriteRule  ^([a-z0-9-]+)$ views/error.php
+RewriteRule  ^models/connect.php$ views/error.php
 ErrorDocument 404 /views/error.phpexit

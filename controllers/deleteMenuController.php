@@ -7,6 +7,9 @@ if ($_POST['delete']) {
     header("Location: ../views/displayMenu.php");
 }
 
+$menu = new Menu();
+$menuList = $menu->getMenu($_GET['id']);
+
 if(empty($_SESSION)){
     header('Location: ../views/login.php');
 }

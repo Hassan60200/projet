@@ -7,6 +7,7 @@ if ($_POST['validate']) {
     header("Location: ../views/bookAdmin.php");
 }
 
+
 if(empty($_SESSION)){
     header('Location: ../views/login.php');
 }

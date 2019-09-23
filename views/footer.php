@@ -49,9 +49,7 @@
             <!-- Content -->
             <h6 class="text-uppercase font-weight-bold">L'Escale</h6>
             <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto border-danger" style="width: 60px;">
-            <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                consectetur
-                adipisicing elit.</p>
+            <p>L'Escale et toutes son équipe vous accueille dans leur restaurant pour vous faire découvrir toutes la gastronomie marocaines et françaises. On vous accueille du lundi au samedi à partir de 7h30 jusqu'à 20h00 et le dimanche de 10h00 à 21h00 !!!</p>
 
         </div>
         <!-- Grid column -->

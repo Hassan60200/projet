@@ -1,5 +1,4 @@
 <?php
-include_once '../models/connect.php';
 include_once '../controllers/loginController.php';
 ?>
 <!DOCTYPE html>
@@ -27,7 +26,7 @@ include_once '../controllers/loginController.php';
 
                             <label for="pseudo">Pseudo :</label>
                             <input type="text" placeholder="Votre pseudo" id="pseudo" class="form-control form-control-sm" name="pseudo" />
-
+                      
                             <label for="mail">Mail :</label>
                             <input type="email" placeholder="Votre mail" id="mail" class="form-control form-control-sm" name="mail"/>
 
@@ -38,6 +37,9 @@ include_once '../controllers/loginController.php';
                                 <input type="submit" class="btn btn-outline-success mt-3" name="forminscription" value="Je m'inscris" />
                                 <a href="connexion.php" class="btn btn-outline-primary mt-3">Déja inscrit</a>
                             </div>
+                            <?php if (isset($error)) { ?>
+                                <p class="alert alert-danger mt-2"><?= $error ?></p>
+                            <?php } ?>
                         </form>
                     </div>
                 </div> 

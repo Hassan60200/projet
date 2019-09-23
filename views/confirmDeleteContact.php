@@ -7,7 +7,7 @@ require_once '../views/navbarAdmin.php';
     <div class="container-fluid row justify-content-center">
         <div class="form m-5 shadow border">
             <h1 class="text-danger">ATTENTION !</h1>
-            <h2 class="mt-5">Êtes-vous sur de vouloir supprimer l'utilisateur ?</h2>
+            <h2 class="mt-5">Êtes-vous sur de vouloir supprimer l'utilisateur <?= $profilList->lastname ?> <?= $profilList->firstname ?> ?</h2>
             <h3 class="mb-5">Cette action sera irréversible</h3>
             <div class="row justify-content-center pt-3">
                 <div class="col-4">
