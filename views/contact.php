@@ -47,7 +47,7 @@ include_once '../views/header.php';
                         </div>
                     </div>
                     <div class="submit text-center">
-                        <input type="submit" name="bouton" class="btn-outline-primary mt-3 " value="Envoyer">
+                        <input type="submit" name="bouton" class="btn btn-primary mt-3 " value="Envoyer">
                     </div>
                     <small>* Obligatoire</small>
                     <div class="g-recaptcha" data-sitekey="6LdEmLAUAAAAANDJ_ozLUJR4hdsYV38EQ4MUcsaI"></div>
